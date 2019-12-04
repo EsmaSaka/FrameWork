@@ -1,7 +1,7 @@
 package tests.day15_PropertiesFile;
 
 import org.testng.annotations.Test;
-import tests.TestBase;
+import pages.TestBase;
 import utils.BrowserUtils;
 import utils.ConfigurationReader;
 import utils.Driver;

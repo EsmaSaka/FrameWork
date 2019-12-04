@@ -12,7 +12,7 @@ import utils.Driver;
 // login page= login page class
 //every page class will store web elements and methods..
 // first create constructor to store initialize variables
-public class LoginPage {
+public class LoginPage  extends BasePage{
 
     @FindBy(id="prependedInput")// this line will initialize webelement
     public WebElement userNameInput;
