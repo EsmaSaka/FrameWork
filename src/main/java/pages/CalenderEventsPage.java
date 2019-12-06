@@ -8,6 +8,9 @@ public class CalenderEventsPage extends BasePage{
 
     @FindBy(css = "[title='Create Calendar event']")
     public WebElement createCalendarEvent;
+     public CalenderEventsPage(){
+
+     }
 
     public void clickToCreateCalendarEvent(){
         BrowserUtils.waitForVisibility(createCalendarEvent, 5);

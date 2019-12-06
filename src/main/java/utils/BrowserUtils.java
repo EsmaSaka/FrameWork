@@ -80,7 +80,7 @@ public class BrowserUtils {
     public static String getScreenshot(String name) {
         // name the screenshot with the current date time to avoid duplicate name
 //        String date = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));
-        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        SimpleDateFormat df = new SimpleDateFormat("dd-mm-yyyy HH:mm");
         String date = df.format(new Date());
         // TakesScreenshot ---> interface from selenium which takes screenshots
         TakesScreenshot ts = (TakesScreenshot) Driver.get();
