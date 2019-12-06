@@ -5,7 +5,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.LoginPage;
-import pages.TestBase;
 import utils.BrowserUtils;
 import utils.ConfigurationReader;
 import utils.Driver;

@@ -1,39 +1,33 @@
 package VYtrack;
 
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.CalenderEventsPage;
 import pages.LoginPage;
-import pages.TestBase;
 import utils.ConfigurationReader;
-import utils.Driver;
-
-import java.util.concurrent.TimeUnit;
 
 
 public class NewCalenderEventsTest extends TestBase {
-
-
     @Test(description = "Verify that page subtitle is equals to 'All Calendar Events'")
     public void test1() {
+        //this step is required for every test
+        //otherwise you will get nullpointer exception
+        //you must create a test at the beginning
+        extentTest = extentReports.createTest("Verify that page subtitle is equals to 'All Calendar Events'");
+
         LoginPage loginPage = new LoginPage(); //login page object
-        CalenderEventsPage calenderEventPage= new CalenderEventsPage();
 
         loginPage.login(ConfigurationReader.getProperty("userName"), ConfigurationReader.getProperty("passWord"));
-       // WebDriverWait wait= new WebDriverWait(Driver.get(),10);
-       // wait.until(ExpectedConditions.invisibilityOf())
-     //  loginPage.waitUntilLoaderMaskDisappear();
-
         loginPage.navigateTo("Activities", "Calendar Events");
-      //  loginPage.waitUntilLoaderMaskDisappear();
-       // calenderEventPage.clickToCreateCalendarEvent();
-        String expectedSubtitle = "All Calendar Events";
 
+        String expectedSubtitle = "All Calendar Events";
         String actualSubTitle = loginPage.getPageSubTitle();
 
         Assert.assertEquals(actualSubTitle, expectedSubtitle);
+
+        extentTest.pass("Verified that page subtitle 'All Calendar Events' is displayed");
     }
 }
+
+
+
 

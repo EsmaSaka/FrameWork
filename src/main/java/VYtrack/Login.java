@@ -2,7 +2,6 @@ package VYtrack;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import pages.TestBase;
 import utils.BrowserFactory;
 
 import java.util.concurrent.TimeUnit;
