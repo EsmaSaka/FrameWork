@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 import pages.CreateCarPage;
 import pages.LoginPage;
 import pages.VehiclesPage;
+import utils.ConfigurationReader;
 
 public class CreateCarTests extends TestBase {
 
@@ -15,7 +16,7 @@ public class CreateCarTests extends TestBase {
         VehiclesPage vehiclesPage = new VehiclesPage();
         CreateCarPage createCarPage = new CreateCarPage();
 
-        loginPage.login("storemanager85", "UserUser123");
+        loginPage.login(ConfigurationReader.getProperty("userName"), ConfigurationReader.getProperty("passWord"));
         loginPage.navigateTo("Fleet", "Vehicles");
 
         loginPage.waitUntilLoaderMaskDisappear();
