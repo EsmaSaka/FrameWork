@@ -25,9 +25,14 @@ public class CreateCarTests extends TestBase {
 
         loginPage.waitUntilLoaderMaskDisappear();
 
-        createCarPage.licensePlateElement.sendKeys("Random");
-        createCarPage.selectTags("Compact");
-        createCarPage.selectFuelType("Diesel");
+        createCarPage.licensePlateElement.sendKeys("Gui2345");
+        createCarPage.selectTags("Convertible");
+        createCarPage.selectFuelType("Gasoline");
+        createCarPage.setLocation("VA");
+        createCarPage.setChassis("12345");
+        createCarPage.setDriver("vasyl ");
+        createCarPage.setModelYear("2020");
+     //   createCarPage.uploadLogo("acura.jpg");
 
         loginPage.waitUntilLoaderMaskDisappear();
         createCarPage.saveAndCloseButtonElement.click();

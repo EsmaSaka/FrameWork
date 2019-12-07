@@ -28,7 +28,7 @@ public class SmokeTest extends TestBase {
                 {"Dashboards", "Dashboard", "Dashboard"},
                 {"Dashboards", "Manage Dashboards", "All Manage Dashboards"},
                 {"Fleet", "Vehicles", "All Cars"},
-                {"Customers", "Accounts", "All Accounts"}
+                {"Customers", "Accounts", "All Accounts"},
                 {"Activities", "Calls", "All Calls"},
                 {"Activities", "Calendar Events", "All Calendar Events"},
                 {"Sales", "Opportunities", "Open Opportunities"}

@@ -25,6 +25,11 @@ public class CreateCarPage extends BasePage {
     //if this locator doesn't work, use [id^='uniform-custom_entity_type_Logo_file'] > span[class='action']
     @FindBy(name = "custom_entity_type[Logo][file]")
     public WebElement logoElement;
+    @FindBy(name = "custom_entity_type[ChassisNumber]")
+    public WebElement chassisElement;
+    @FindBy(name = "custom_entity_type[ModelYear]")
+    public WebElement modelYearElement;
+
 
 
     /**
@@ -80,4 +85,22 @@ public class CreateCarPage extends BasePage {
         BrowserUtils.waitForVisibility(logoElement, 15);
         logoElement.sendKeys(pathToTheFile);
     }
+    public void setLocation(String location){
+        BrowserUtils.waitForVisibility(locationElement,10);
+        locationElement.sendKeys(location);
+
+    }
+    public void setChassis(String chassisNo){
+        BrowserUtils.waitForVisibility(chassisElement,10);
+        chassisElement.sendKeys(chassisNo);
+    }
+    public void setDriver(String setDriver){
+        BrowserUtils.waitForVisibility(driverElement,10);
+        driverElement.sendKeys(setDriver);
+    }
+    public void  setModelYear(String year){
+        BrowserUtils.waitForVisibility(modelYearElement,10);
+        modelYearElement.sendKeys(year);
+    }
+
 }

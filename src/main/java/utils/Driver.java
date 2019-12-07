@@ -15,9 +15,7 @@ public class Driver {
     private  static WebDriver driver;
                 // RemoteWebDriver
     private Driver(){
-
     }
-
     public static WebDriver get(){
         if(driver== null){
             String browser= ConfigurationReader.getProperty("browser");

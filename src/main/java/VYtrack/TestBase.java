@@ -19,6 +19,8 @@ import java.io.IOException;
 //we will put here only before and after parts
 //In this way before and after methods will be the same
 //Every test class will extend testbase class
+
+
 public abstract class TestBase {
 // * ExtentReports itself does not build any reports, but allows reporters to access information, which in
 // * turn build the said reports. An example of building an HTML report and adding information to ExtentX:
@@ -47,6 +49,8 @@ public abstract class TestBase {
     }
 
 
+
+
     @AfterTest
     public void afterTest(){
 //         Writes test information from the started reporters to their output view
@@ -58,6 +62,7 @@ public abstract class TestBase {
     public void setup(){
         String url = ConfigurationReader.getProperty("url");
         Driver.get().get(url);
+        Driver.get().manage().window().maximize();
     }
 
     //ITestResult class describes the result of a test. (in TestNG)
