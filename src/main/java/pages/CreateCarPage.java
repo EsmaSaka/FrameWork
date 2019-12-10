@@ -25,10 +25,18 @@ public class CreateCarPage extends BasePage {
     //if this locator doesn't work, use [id^='uniform-custom_entity_type_Logo_file'] > span[class='action']
     @FindBy(name = "custom_entity_type[Logo][file]")
     public WebElement logoElement;
+
     @FindBy(name = "custom_entity_type[ChassisNumber]")
     public WebElement chassisElement;
+
     @FindBy(name = "custom_entity_type[ModelYear]")
     public WebElement modelYearElement;
+
+    @FindBy(id = "select2-drop-mask")
+    public WebElement transmissionElement;
+
+    @FindBy(xpath = "//div[contains(text(),'Automatic')]")
+    public  WebElement automatic;
 
 
 
@@ -101,6 +109,15 @@ public class CreateCarPage extends BasePage {
     public void  setModelYear(String year){
         BrowserUtils.waitForVisibility(modelYearElement,10);
         modelYearElement.sendKeys(year);
+    }
+    public void selectTransmission(){
+      //  act.moveByOffset(0,50);
+       // BrowserUtils.clickWithJS(transmissionElement);
+       // BrowserUtils.waitForVisibility(transmissionElement,10);
+       // transmissionElement.click();
+        //BrowserUtils.wait(2);
+        //automatic.click();
+       // BrowserUtils.clickWithJS(automatic);
     }
 
 }

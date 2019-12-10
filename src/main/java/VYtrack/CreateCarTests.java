@@ -32,6 +32,8 @@ public class CreateCarTests extends TestBase {
         createCarPage.setChassis("12345");
         createCarPage.setDriver("vasyl ");
         createCarPage.setModelYear("2020");
+
+       // createCarPage.selectTransmission();
      //   createCarPage.uploadLogo("acura.jpg");
 
         loginPage.waitUntilLoaderMaskDisappear();

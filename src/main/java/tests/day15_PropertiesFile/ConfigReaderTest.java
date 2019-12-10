@@ -6,7 +6,7 @@ import utils.ConfigurationReader;
 
 public class ConfigReaderTest {
 
-    @Test
+    @Test()
     public void test01(){
         String expectedBrowser="chrome";
         String actualBrowser= ConfigurationReader.getProperty("browser");
