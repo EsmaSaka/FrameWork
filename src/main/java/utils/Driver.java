@@ -43,13 +43,13 @@ public class Driver {
                     driver= new InternetExplorerDriver();
                     break;
                 case "Edge" :
-                    if(System.getProperty("os.name").toLowerCase().contains("windows"))
+                    if(!System.getProperty("os.name").toLowerCase().contains("windows"))
                         throw new WebDriverException("your OS does not support Edge");
                     WebDriverManager.edgedriver().setup();
                     driver= new EdgeDriver();
                     break;
                 case "Safari" :
-                    if(System.getProperty("os.name").toLowerCase().contains("mac"))
+                    if(!System.getProperty("os.name").toLowerCase().contains("mac"))
                         throw new WebDriverException("your OS does not support mac");
                     WebDriverManager.getInstance(SafariDriver.class).setup();
                     driver= new SafariDriver();
