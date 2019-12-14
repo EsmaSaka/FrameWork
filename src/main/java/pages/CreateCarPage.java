@@ -37,6 +37,9 @@ public class CreateCarPage extends BasePage {
 
     @FindBy(xpath = "//div[contains(text(),'Automatic')]")
     public  WebElement automatic;
+    @FindBy(name = "custom_entity_type[Color]")
+    public WebElement colorElement;
+
 
 
 
