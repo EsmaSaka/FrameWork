@@ -13,7 +13,9 @@ package tests.day21_git_branch;
         last testng class
         overview of our framework
 ##############################################
-    Merge conflict - it's when multiple contributors (2 people) changed same file. To resolve conflict, we can do couple things:
+    Merge conflict - it's when multiple contributors (2 people) changed same file. To resolve conflict, we can do
+    couple things:
+
     1. Stash changes (if you didn't finish,and you cannot combine changes, stash your changes. In this case, you are not loosing changes forever.)
     2. Discard your changes (you are loosing your changes forever)
         either git checkout file or git reset --hard
@@ -26,8 +28,12 @@ package tests.day21_git_branch;
         merge changes (compromise)
         once conflict resolved, we can commit and push changes to github
     4. Just clone project again and copy paster your changes (NO, but this is what people usually do)
-#####################################
-GIT BRANCHES
+##################################### */
+
+
+
+
+ /*GIT BRANCHES
 What is branch? It's a one version of your project. With git, we can have multiple version of project that exist in parallel. Every branch can have independent commits history.
 Ideally, everyone works on their own branch, and then once work is done, you can create pull request to apply your changes to the main branch. This flow, allows to review code before accepting ant=y changes.
 Use a branch to isolate development work without affecting other branches in the repository.
