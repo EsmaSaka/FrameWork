@@ -6,6 +6,8 @@ import org.testng.annotations.Test;
 import pages.LoginPage;
 import utils.ConfigurationReader;
 
+
+
 public class SmokeTest extends TestBase {
 
     @Test(dataProvider = "navigationInfo")
@@ -19,6 +21,7 @@ public class SmokeTest extends TestBase {
 
         loginPage.waitUntilLoaderMaskDisappear();
 
+        loginPage.waitForPageSubTitle(pageSubTitle);
         Assert.assertEquals(loginPage.getPageSubTitle(), pageSubTitle);
 
         extentTest.pass("Verified that page subtitle '" + pageSubTitle + "' is displayed");
