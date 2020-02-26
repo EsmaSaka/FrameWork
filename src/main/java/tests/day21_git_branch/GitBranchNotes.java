@@ -44,7 +44,7 @@ git branch
 Master branch should have latest stable and confirmed code.
 Ideally, master branch shouldn't accept direct commits. Otherwise, changes can be committed without code review.
 In my project. test lead was review code. But if there is no team lead/test lead then we do peer review.
-Everyones code must go through review.
+Everyone code must go through review.
 But, test lead can decide/choose the flow.
 Every commit must be reviewed.
 Commit code when you completed some work.

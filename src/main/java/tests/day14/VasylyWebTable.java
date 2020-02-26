@@ -11,6 +11,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import utils.BrowserFactory;
 
+import java.util.Iterator;
 import java.util.List;
 
 
@@ -47,6 +48,13 @@ import java.util.List;
         public void test2() {
             //size = amount of elements
             int actualColumnNumber = driver.findElements(By.xpath("//table[@id='table1']//th")).size();
+            List<WebElement> colNames=driver.findElements(By.xpath("//table[@id='table1']//th"));
+          //  colNames.forEach((n) -> System.out.println(n));
+            Iterator<WebElement>it= colNames.iterator();
+           while( it.hasNext()){
+               System.out.println(it.next().getText());
+           }
+
             int expectedColumnNumber = 6;
             Assert.assertEquals(actualColumnNumber, expectedColumnNumber);
         }
